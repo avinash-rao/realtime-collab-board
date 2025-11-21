@@ -71,3 +71,30 @@ We update only card.listId
 No need to touch Board.lists[]
 
 This is why cards are stored separately — updating is cheap.
+
+---
+
+# CRUD Overview
+### ✔ 1. Board CRUD
+
+- Create board
+- Get board by ID
+- Get boards for a user
+- Update board
+- Delete board
+- Add list to board
+- Update list
+- Delete list
+
+### ✔ 2. Card CRUD
+
+- Create card
+- Get cards by board
+- Move card between lists
+- Update card
+- Delete card
+
+### ✔ 3. User CRUD (minimal for now)
+
+- Create user
+- Get by ID  
