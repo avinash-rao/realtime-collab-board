@@ -33,7 +33,7 @@ public class Card {
     private List<Comment> comments = new ArrayList<>();
 
     private Instant dueDate;
-    private Instant position;
+    private Integer position;
 
     private List<String> assignees = new ArrayList<>();
 
