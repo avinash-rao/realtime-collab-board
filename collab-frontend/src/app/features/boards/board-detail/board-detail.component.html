@@ -1,1 +1,36 @@
-<p>board-detail works!</p>
+<div class="p-4 flex gap-4 overflow-x-auto h-full">
+
+  <!-- LOADING -->
+  <div *ngIf="!board()">
+    Loading board...
+  </div>
+
+  <!-- LISTS -->
+  <div 
+    *ngFor="let list of lists()" 
+    class="bg-gray-100 w-64 rounded-lg p-4 flex flex-col shrink-0"
+  >
+    <h3 class="font-semibold text-lg mb-3">{{ list.title }}</h3>
+
+    <!-- Cards under this list -->
+    <div class="flex flex-col gap-2">
+      <div 
+        class="bg-white p-3 rounded shadow cursor-pointer hover:bg-gray-50"
+        *ngFor="let card of cards() | cardFilter:list.id"
+      >
+        {{ card.title }}
+      </div>
+    </div>
+
+    <!-- Add Card Button -->
+    <button class="mt-3 text-blue-600 text-sm font-medium">+ Add Card</button>
+  </div>
+
+  <!-- ADD LIST -->
+  <button 
+    class="bg-gray-200 w-64 p-4 rounded-lg text-gray-700 shrink-0"
+  >
+    + Add List
+  </button>
+
+</div>
