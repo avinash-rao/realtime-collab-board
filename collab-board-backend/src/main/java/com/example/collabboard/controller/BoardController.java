@@ -5,10 +5,10 @@ import com.example.collabboard.dto.board.BoardResponse;
 import com.example.collabboard.dto.list.ListRequest;
 import com.example.collabboard.dto.list.ListResponse;
 import com.example.collabboard.service.board.BoardService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController

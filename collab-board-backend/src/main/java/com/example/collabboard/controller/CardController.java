@@ -3,10 +3,10 @@ package com.example.collabboard.controller;
 import com.example.collabboard.dto.card.CardRequest;
 import com.example.collabboard.dto.card.CardResponse;
 import com.example.collabboard.service.card.CardService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
