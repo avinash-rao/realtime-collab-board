@@ -20,8 +20,11 @@ export class BoardsListComponent {
   private boardService = inject(BoardService);
   private router = inject(Router);
 
+  // TEMPORARY: Hardcode userId until we add login system
+  private readonly userId = 'user123';
+
   // Using toSignal -> modern Angular API
-  boards = toSignal(this.boardService.getBoards(), {initialValue: [] as Board[]});
+  boards = toSignal(this.boardService.getBoards(this.userId), {initialValue: [] as Board[]});
 
   openBoard(board: Board) {
     this.router.navigate(['/boards', board.id]);

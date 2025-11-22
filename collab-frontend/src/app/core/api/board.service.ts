@@ -9,8 +9,8 @@ export class BoardService {
 
   private readonly http = inject(HttpClient);
 
-  getBoards(): Observable<Board[]> {
-    return this.http.get<Board[]>('boards');
+  getBoards(userId: string): Observable<Board[]> {
+    return this.http.get<Board[]>(`boards/user/${userId}`);
   }
 
   getBoard(id: string): Observable<Board> {
